@@ -31,8 +31,10 @@ button:active,textarea:active{border-color: indigo #f3f #f6f indigo;border-width
 /* 上邊全部按鈕 */
 .tdup{height: 10vh;width: 50vw;}
 /* 各別按鈕 */
-#addPWA{height: 90%;color: blue; font-size: 12pt; text-align: justify;}
-#reload{height:90%;color: green; font-size: 18pt;  text-align: justify;}
+/* #addPWA{height: 90%;color: blue; font-size: 12pt; text-align: justify;}
+#reload{height:90%;color: green; font-size: 18pt;  text-align: justify;} */
+#addPWA{color: blue; font-size: 1em;}
+#reload{color: green;}
 /* 下邊全部按鈕 */
 .tddown{height: 20vh;width: calc(100vw / 6);}
 .btnshow{height: 90%;width: 90%; color: brown; font-size: 20pt; }
@@ -41,8 +43,8 @@ button:active,textarea:active{border-color: indigo #f3f #f6f indigo;border-width
 /* .btnmula{height: 20vh;width: 100%;}
 .divmula{height: 80vh;width: 100%;} */
 
-#blog1 {height: 60vh;width: 60%;margin: 5px 10px 0px 0px;
-overflow: auto;background-image: url(icons/f512.png);background-size: 100% 100%;
+#blog1 {height: 67vh;width: 60%;margin: 5px 10px 0px 0px;
+overflow: auto;background-image: url(icons/byblue.jpg);background-size: 100% 100%;
 /* 浮動 */
 float: left;
 }
@@ -51,7 +53,7 @@ float: left;
 #btnlink2{color: dodgerblue;}
 #btnlink4{color: firebrick;}
 /* 去除點標 */
-#btnfirst{list-style-type:none;}
+#btnfirst{list-style-type:none;padding-top: 10vh;}
 #btnfirst button{width: 40%;margin: 1px;}
 
 #div5 {height: 70vh;width: 100%;background:#ff8;}
@@ -649,25 +651,19 @@ window.onload = function () {
     <!-- <div id="divmula" class="mula"> -->
         <div id="div1" class="divShow">
 
-            <table id="first">
-                <tr>
-                    <td class="tdup"><button id="addPWA" disabled>安裝成APP<br />iPhone請使用「加到主頁面」</button>
-                    </td>
-                    <td class="tdup"><button id="reload" onclick="javascript:window.location.reload()">重整頁面</button>
-                    </td>
-                </tr>
-            </table>
-
-            <!-- <a href="https://www.sande.org.tw/"><img id="blog1"></img></a> -->
-            <img id="blog1"></img>
-
-            <div id="fblink">
-                <ul id="btnfirst">
-                    <li><a href="https://www.sande.org.tw/"><button id="btnlink5" class="nf">本因法師網站</button></a></li>
-                    <li><a href="https://lin.ee/2lwTwQ7"><button id="btnlink1" class="nf">LINE官方帳號</button></a></li>
-                    <li><a href="https://line.me/ti/g2/d9kondefPW9QyDG2_4H86S8WjC_S0vYHTvigsQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"><button id="btnlink3" class="nf gk">LINE公告群</button></a></li>
+        <img id="blog1"></img>
+        
+        <div id="fblink">
+            <ul id="btnfirst">
+                    <!-- <li class="tdup"><button id="addPWA" class="nf" disabled>安裝成APP<br />iPhone請使用「加到主頁面」</button></li>
+                    <li class="tdup"><button id="reload" class="nf" onclick="javascript:window.location.reload()">重整頁面</button></li> -->
+                    <li><button id="addPWA" class="nf" disabled>安裝成APP<br />iPhone請使用「加到主頁面」</button></li>
+                    <li><button id="reload" class="nf" onclick="javascript:window.location.reload()">重整頁面</button></li>
+                    <li><a href="https://namo-amtb.org/ben-yin-intro/"><button id="btnlink5" class="nf">本因法師簡介</button></a></li>
+                    <li><a href="https://www.benyin-master.org/"><button id="btnlink1" class="nf">本因法師資訊網</button></a></li>
+                    <!-- <li><a href="https://www.benyin-master.org/"><button id="btnlink3" class="nf gk">本因法師資訊網</button></a></li> -->
                     <li><a href="https://www.youtube.com/@ytsdv"><button id="btnlink4" class="nf">YOUTUBE</button></a></li>
-                    <li><a href="https://www.facebook.com/sdvfb/"><button id="btnlink2" class="nf">臉書粉絲頁</button></a></li>
+                    <!-- <li><a href="https://www.facebook.com/sdvfb/"><button id="btnlink2" class="nf">臉書粉絲頁</button></a></li> -->
                 </ul>
             </div>
         </div>
@@ -767,52 +763,6 @@ window.onload = function () {
             <div id="cleanShow">
                 <table id="me">
                     <tr>
-                        <td>帳號</td>
-                        <td>
-                            <ul>
-                            <li>戶名：社團法人彰化縣本因法師念佛會</li>
-                            <li>劃撥：郵政劃撥帳號 22855554</li>
-                            <li>銀行：(053)台中銀行 埤頭分行 079-22-0096762</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>組織資訊</td>
-                        <td>
-                            <ul>
-                            <li>法人登記：109證社字第26號登記簿第10冊第185頁第825號</li>
-                            <li>立案證書：府社發展字第109077號</li>
-                            <li>統一編號：87165393</li>
-                            <li>E-mail信箱：tw048911311@gmail.com</li>
-                            <li>電話：04-8924737(常用)  04-8911311(社團專線)</li>
-                            <li>共修地址：彰化縣埤頭鄉芙朝村庄後路144號(民宅)</li>
-                            <li>新建精舍基地地址：彰化縣埤頭鄉新庄村新庄路418號(後面是基地)</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>社群媒體</td>
-                        <td>
-                            <ul>
-                                <li><a href="https://www.sande.org.tw/" target="_blank">本因法師網站</a></li>
-                                <li><a href="https://lin.ee/2lwTwQ7" target="_blank">LINE官方帳號</a></li>
-                                <li><a href="https://line.me/ti/g2/d9kondefPW9QyDG2_4H86S8WjC_S0vYHTvigsQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">LINE公告群</a></li>
-                                <li><a href="https://www.youtube.com/@ytsdv" target="_blank">YOUTUBE</a></li>
-                                <li><a href="https://www.youtube.com/@bsdv" target="_blank">YOUTUBE-1</a></li>
-                                <li><a href="https://www.facebook.com/sdvfb/" target="_blank">臉書粉絲頁</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>比丘</td>
-                        <td>
-                            <ul>
-                            <li>共同創建比丘：釋常誠、釋本傑、釋本知</li>
-                            <li>道場主：釋常誠</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
                         <td>重新安裝網址</td>
                         <td>
                             <ul>
@@ -845,7 +795,7 @@ window.onload = function () {
             <td class="tddown"><button id="btn2" class="btnshow">念佛<br />計數</button></td>
             <td class="tddown"><button id="btn6" class="btnshow">計數器<br />念佛</button></td>
             <td class="tddown"><button id="btn3" class="btnshow">功課<br />計數</button></td>
-            <td class="tddown"><button id="btn4" class="btnshow">關於我</button></td>
+            <td class="tddown"><button id="btn4" class="btnshow">安裝步驟</button></td>
             <!-- </div> -->
         </tr>
     </table>
