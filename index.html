@@ -8,20 +8,20 @@
     <base target="_blank">
 
     <!-- <link rel="stylesheet" href="css1.css" /> -->
-    <link rel="icon" href="icons/f48.png" />
+    <link rel="icon" href="icons/by48.png" />
 
     <link rel="canonical" href="https://adbdao.github.io/pwa_by/" />
     <link rel="manifest" href="/pwa_by/blog.webmanifest">
     <style>
-/* *{border-radius: 8px;padding: 3px;} */
-/*html{background: black;color:gray;}*/
 /* 反白選取 */
 ::selection{background: darkred;color:yellow;}
 ::-moz-selection{background: darkred;color:yellow;}
 
-body {background: -webkit-linear-gradient(right, peru 0.00%, gold 90.00%);background: linear-gradient(right, peru 0.00%, gold 90.00%);}
+body {background: -webkit-linear-gradient(right, #0066EF 0.00%, #3EA0FF 100.00%);
+    background: linear-gradient(right, #0066EF 0.00%, #3EA0FF 100.00%);}
+    /* background: linear-gradient(right, peru 0.00%, gold 90.00%);} */
 
-table{height: 100%;width: 100%;border: 0;text-align: center;}
+table{height: 100%;width: 100%;border: 0;}
 
 /* 全部按鈕 */
 button {border-radius: 15px;border:0; background: -webkit-linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%); background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);box-shadow: 4px 3px 4px silver,8px 7px 7px gray;}
@@ -33,20 +33,24 @@ button:active,textarea:active{border-color: indigo #f3f #f6f indigo;border-width
 /* 各別按鈕 */
 /* #addPWA{height: 90%;color: blue; font-size: 12pt; text-align: justify;}
 #reload{height:90%;color: green; font-size: 18pt;  text-align: justify;} */
-#addPWA{color: blue; font-size: 1em;}
+#addPWA{color: blue;font-size: 1.2em;}
 #reload{color: green;}
 /* 下邊全部按鈕 */
-.tddown{height: 20vh;width: calc(100vw / 6);}
+.tddown{height: 10vh;width: calc(100vw / 4);}
 .btnshow{height: 90%;width: 90%; color: brown; font-size: 20pt; }
-
 
 /* .btnmula{height: 20vh;width: 100%;}
 .divmula{height: 80vh;width: 100%;} */
 
-#blog1 {height: 67vh;width: 60%;margin: 5px 10px 0px 0px;
+#blog1 {height: 80vh;width: 80%;margin: 0 auto;text-align: center;
+    /* margin: 5px 10px 0px 0px; */
 overflow: auto;background-image: url(icons/byblue.jpg);background-size: 100% 100%;
+/* 讓圖片覆蓋整個容器，並保留圖片比例 */
+/* background-size: scale-down;
+background-position: center;
+object-fit: scale-down; */
 /* 浮動 */
-float: left;
+/* float: left; */
 }
 #fblink{line-height: 2em;}
 #btnlink1{color: #2b4;}
@@ -56,116 +60,68 @@ float: left;
 #btnfirst{list-style-type:none;padding-top: 10vh;}
 #btnfirst button{width: 40%;margin: 1px;}
 
-#div5 {height: 70vh;width: 100%;background:#ff8;}
-#blog2 {height: 100%;width: 100%;overflow: auto;background-image: url(icons/f512.png);background-size: 100% 100%;}
+#div5 {height: 80vh;width: 100%;background:#ff8;}
+#blog2 {height: 100%;width: 100%;overflow: auto;background-image: url(icons/by512.png);background-size: 100% 100%;}
 /* 全部頁面 */
 .divShow{display: none;}
 /* 各別頁面 */
 /* #div0 {background:#ccc;background:#fec;} */
 #div1 {display: block;}
 
-#div7 {background:beige;height: 70vh;width: 100%;text-align: center;
+#div7 {background:beige;height: 80vh;width: 100%;text-align: center;
 /* 停止浮動 */
 clear: both;
 }
-#div6 {background:#adf;height: 70vh;width: 100%;text-align: center;}
+#div6 {background:#adf;height: 80vh;width: 100%;text-align: center;}
 
-#div2 {background:#ebe;height: 70vh;width: 100%;text-align: center;}
-#nfShow1,#nfShow2,#gkShow{height: 50%;width: 100%;padding: 2vh 0 0 0 ; font-size: 24pt;color: blue;overflow: auto;}
+#div2 {background:#ebe;height: 80vh;width: 100%;text-align: center;}
+#nfShow1,#nfShow2,#gkShow{height: 65%;width: 100%;padding: 2vh 0 0 0 ; font-size: 24pt;color: blue;overflow: auto;}
 .nfNumClass{font-size: 24pt;color: green;width: 50vw;}
 .nf{font-size: 24pt;color: indigo;}
 
-#div3 {background:#aea;height: 70vh;width: 100%;text-align: center;}
+#div3 {background:#aea;height: 80vh;width: 100%;text-align: center;}
 .gkNumClass{font-size: 24pt;color: darkviolet;width: 50vw;}
 #gkNum2{width: 30vw;}
 .gk{color: green;}
+.bk{color: #06f;}
+.br{color: crimson;}
 
-#div4 {background:tan;height: 70vh;width: 100%;}
-.clean{color: black;display: none;position: absolute;width: 300px;height: 200px;}
-.clean td{padding: 5px 5px;}
-#cleanShow{height: 90%;width: 100%;overflow: auto;
-    /* background-image: url(icons/f512.png);background-size: 100% 100%;opacity: 0.5; */
+#div4 {background:tan;height: 80vh;width: 100%;}
+/* .clean{color: black;display: none;position: absolute;width: 300px;height: 200px;}
+.clean td{padding: 5px 5px;} */
+/* 去除點標 */
+.cleanmula{list-style-type:none;
+    /* text-align: right;margin-top: -2em; */
+}
+.cleanmula:hover>li>ul{display: block;}
+/* 去除點標 */
+.clean{display: none;list-style-type:none;}
+.clean li{padding: 5px 5px;}
+#cleanShow{height: 100%;width: 100%;overflow: auto;
+    /* background-image: url(icons/by512.png);background-size: 100% 100%;opacity: 0.5; */
 }
 /* 日期、人名樣式 */
 span{color: darkgreen;}
 /* 加大字體 */
 font{color: crimson;font-size: 2em;}
 /* 關於我 */
-#me,#me td{border:1px solid black;font-size: 16pt;color:black;text-align: left;border-spacing:0 0 ;}
+#me,#me td{border:1px solid black;font-size: 16pt;color:black;text-align: left;border-spacing:0 0 ;padding: 0.5em;}
 #txt1{width: 1px;height: 1px;border: 0;}
 
 /* 豎屏狀態的css */
 @media screen and (orientation:portrait){
-/* *{border-radius: 8px;padding: 3px;} */
-/*html{background: black;color:gray;}*/
-/* 反白選取 */
-/* ::selection{background: darkred;color:yellow;}
-::-moz-selection{background: darkred;color:yellow;} */
-
-/* body {background: -webkit-linear-gradient(right, peru 0.00%, gold 90.00%);background: linear-gradient(right, peru 0.00%, gold 90.00%);} */
-
-/* table{height: 100%;width: 100%;border: 0;text-align: center;} */
-
 /* 全部按鈕 */
 button {border-radius: 25px;box-shadow: 8px 7px 8px silver,16px 14px 14px gray;}
-/* button:active,textarea:active{border-color: indigo #f3f #f6f indigo;border-width:5px;border-style:solid;box-shadow: -5px -5px 20px darkorchid;} */
-/* 上邊全部按鈕 */
-#first{height: 7vh;}
-.tdup{height: 7vh;}
-/* 各別按鈕 */
-#addPWA{ font-size: 24pt;}
-#reload{ font-size: 36pt;}
-/* 下邊全部按鈕 */
-.tddown{height: 10vh;}
-.btnshow{ font-size: 34pt; }
-
-
-/* .btnmula{height: 20vh;width: 100%;}
-.divmula{height: 80vh;width: 100%;} */
-
-/* 新聞頁加長 */
-#blog1 {height: 40vh;width: 100%;margin: 20px 0 20px 0;
-}
-#fblink{
-/* 停止浮動 */
-clear: both;
--moz-column-count: 2;
-/* Firefox */
--webkit-column-count: 2;
-/* Safari and Chrome */
-column-count: 2;
-}
-#btnfirst button{width: 100%;height: 2.3em;margin: 7px 5px 7px -20px;}
-/* #blog2 {height: 75vh;} */
 
 /* 全部頁面 */
 /* class比不過id */
 /* .divShow{height: 80vh;} */
-#div1,#div2,#div3,#div4,#div5,#div6,#div7{height: 80vh;}
+/* #div1,#div2,#div3,#div4,#div5,#div6,#div7{height: 80vh;} */
 /* 各別頁面 */
-/* #div0 {background:#ccc;background:#fec;} */
-/* #div1 {display: block;} */
-
-/* #div2 {background:#ebe;height: 70vh;width: 100%;text-align: center;} */
-#nfShow1,#nfShow2{height: 75%;font-size: 32pt;}
-#gkShow{height: 70%;font-size: 32pt;}
-.nfNumClass{font-size: 48pt;}
-.nf{font-size: 48pt;}
-
-/* #div3 {background:#aea;height: 70vh;width: 100%;text-align: center;} */
-/* #div3 {background:#ff8;} */
-.gkNumClass{font-size: 48pt;}
-/* #gkNum2{width: 30vw;}
-.gk{color: green;} */
-
-/* #div4 {background:#f99} */
-/* #div4 {background:tan;height: 70vh;width: 100%;text-align: center;} */
-.clean{width: 650px;height: 500px;}
-#cleanShow{ font-size: 48pt;}
 /* 為老人特別放大字體 */
-p ,p font ,p span{font-size: 96pt;}
+/* p ,p font ,p span{font-size: 96pt;} */
 
-#me,#me td{font-size: 32pt;}
+/* #me,#me td{font-size: 32pt;} */
 }
 </style>
 <script>
@@ -186,23 +142,25 @@ window.onload = function () {
     // btn5.onclick = () => { showdiv(div5) }
     btn6.onclick = () => { showdiv(div6) }
     btn7.onclick = () => { showdiv(div7) }
+    btn8.onclick = () => { showdiv(div8) }
+    btn9.onclick = () => { showdiv(div9) }
     // 顯示「刪除所有記錄」按鈕，套用在按鈕上
-    btnClean0.onclick = () => {
-        var buttonNone = document.getElementsByClassName('clean')
-        // for (var i = 0; i < buttonNone.length; i++) {
-        // if (buttonNone[i].style.display == 'none') {
-        //     buttonNone[i].style.display = 'block'
-        // } else {
-        //     buttonNone[i].style.display = 'none'
-        // }
-        // }
-        // 後來整合成一個表格，所以一次就夠了
-        if (buttonNone[0].style.display == 'none') {
-            buttonNone[0].style.display = 'block'
-        } else {
-            buttonNone[0].style.display = 'none'
-        }
-    }
+    // btnClean0.onclick = () => {
+    //     var buttonNone = document.getElementsByClassName('clean')
+    //     // for (var i = 0; i < buttonNone.length; i++) {
+    //     // if (buttonNone[i].style.display == 'none') {
+    //     //     buttonNone[i].style.display = 'block'
+    //     // } else {
+    //     //     buttonNone[i].style.display = 'none'
+    //     // }
+    //     // }
+    //     // 後來整合成一個表格，所以一次就夠了
+    //     if (buttonNone[0].style.display == 'none') {
+    //         buttonNone[0].style.display = 'block'
+    //     } else {
+    //         buttonNone[0].style.display = 'none'
+    //     }
+    // }
 
     // 通用函數
     // 今日日期、時間
@@ -277,7 +235,7 @@ window.onload = function () {
     }
     // 2024-6-5本知師要求刪除(埤頭)
     // var logo = '<span>/本因法師(埤頭)</span>'
-    var logo = '<span>/本因法師</span>'
+    var logo = ''
 
     // 輸入的佛號數字，導入「瀏覽器本地存儲」，並加上日期，並且顯示在div
     // 記錄頁面有無東西，預設有「備註說明」
@@ -418,6 +376,9 @@ window.onload = function () {
     }
     // 查詢「瀏覽器本地存儲」中的內容，全部導入陣列，並返回
     btnSearch3.onclick = () => {
+        // 限制內容為不可複製
+        c1 = 1
+        // 查詢內容
         DatajsqAll()
         // 清除使用過的陣列，不然會重複計算
         DatajsqSum = 0
@@ -425,8 +386,6 @@ window.onload = function () {
     // 為了計算〈累計總數〉，只好裝入函式
     var DatajsqSum = 0
     function DatajsqAll() {
-        // 限制內容為不可複製
-        c1 = 1
         var Datajsq = []
         var DatajsqNum = []
         // 查詢內容
@@ -482,9 +441,10 @@ window.onload = function () {
     }
     // 查詢「瀏覽器本地存儲」中的內容，統計總數，並返回數字
     btnSum3.onclick = () => {
-        c1 = 0
         // 查詢內容+顯示
         DatajsqAll()
+        // c1=0要在後面，因為DatajsqAll()函數中有c1=1，後來2024/12/7修訂了
+        c1 = 0
         nfShow2.innerHTML = '<p>總計' + DatajsqSum + '句佛號<br>' + logo + '</p>' + jsqFirstShow()
         // 清除使用過的陣列
         DatajsqSum = 0
@@ -492,10 +452,10 @@ window.onload = function () {
         s3 = 1
     }
     // 複製頁面顯示的任何資料
-    // btnCopy3.onclick = () => {
-    //     txt1.value = nfShow2.innerText
-    //     Copy()
-    // }
+    btnCopy3.onclick = () => {
+        txt1.value = nfShow2.innerText
+        Copy()
+    }
 
     // 輸入功課數字，導入「瀏覽器本地存儲」，並加上日期，並且顯示在div
     gkShow.innerHTML = '<br>註：更換手機平板設備前，請先備份數量，<br>本資料庫儲存在手機中，非雲端'
@@ -649,46 +609,50 @@ window.onload = function () {
 </head>
 <body>
     <!-- <div id="divmula" class="mula"> -->
+    <table>
+        <tr>
+            <!-- <div id="btnmula" class="mula"> -->
+            <td class="tddown"><button id="btn1" class="btnshow">首頁</button></td>
+            <!-- <td class="tddown"><button id="btn5" class="btnshow">最新<br />消息</button></td> -->
+            <td class="tddown"><button id="btn8" class="btnshow">比丘課程</button></td>
+            <td class="tddown"><button id="btn9" class="btnshow">居士課程</button></td>
+            <td class="tddown"><button id="btn4" class="btnshow">功能</button></td>
+            <!-- </div> -->
+        </tr>
+    </table>
         <div id="div1" class="divShow">
 
         <img id="blog1"></img>
         
-        <div id="fblink">
+        <!-- <div id="fblink">
             <ul id="btnfirst">
-                    <!-- <li class="tdup"><button id="addPWA" class="nf" disabled>安裝成APP<br />iPhone請使用「加到主頁面」</button></li>
-                    <li class="tdup"><button id="reload" class="nf" onclick="javascript:window.location.reload()">重整頁面</button></li> -->
-                    <li><button id="addPWA" class="nf" disabled>安裝成APP<br />iPhone請使用「加到主頁面」</button></li>
-                    <li><button id="reload" class="nf" onclick="javascript:window.location.reload()">重整頁面</button></li>
-                    <li><a href="https://namo-amtb.org/ben-yin-intro/"><button id="btnlink5" class="nf">本因法師簡介</button></a></li>
-                    <li><a href="https://www.benyin-master.org/"><button id="btnlink1" class="nf">本因法師資訊網</button></a></li>
-                    <!-- <li><a href="https://www.benyin-master.org/"><button id="btnlink3" class="nf gk">本因法師資訊網</button></a></li> -->
-                    <li><a href="https://www.youtube.com/@ytsdv"><button id="btnlink4" class="nf">YOUTUBE</button></a></li>
-                    <!-- <li><a href="https://www.facebook.com/sdvfb/"><button id="btnlink2" class="nf">臉書粉絲頁</button></a></li> -->
-                </ul>
-            </div>
+                <li><a href="https://www.benyin-master.org/"><button id="btnlink3" class="nf gk">本因法師資訊網</button></a></li>
+                <li><a href="https://www.youtube.com/@ytsdv"><button id="btnlink4" class="nf">YOUTUBE</button></a></li>
+                <li><a href="https://www.facebook.com/sdvfb/"><button id="btnlink2" class="nf">臉書粉絲頁</button></a></li>
+                <li class="tdup"><button id="addPWA" class="nf" disabled>安裝成APP<br />iPhone請使用「加到主頁面」</button></li>
+                <li class="tdup"><button id="reload" class="nf" onclick="javascript:window.location.reload()">重整頁面</button></li>
+            </ul>
+            </div> -->
         </div>
 
         <div id="div7" class="divShow">
             <style>
-                #jsj {width: 550px;height: 90px;margin: 0 auto;padding: 10px 0 10px 0;}
+                #jsj {width: 550px;height: 90px;margin: 0 auto;padding: 3em 0 1em 0;}
                 #jsj1 {width: 300px;height: 100px;margin: 0 auto ;}
-                /* #jsj td {width: 300px}
-                #jsj td:nth-child(1) {width: 200px;} */
-                /* #jsj1 td {font-size:24pt; color: white; width:100px} */
                 .Button {font-size:24pt; color: white; background: #555; margin: 4px 4px; width: 100%; height: 100%; border-color: #ccc #333 #333 #ccc; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;}
                 .text_input {font-size:24pt; color: black; text-align: right; background: #ccc;width: 300px;}
                 .Button2,.Button3,.Button4{line-height: 32pt;}
                 .Button2{color: deepskyblue;font-size: 30pt;}
                 .Button3{color: lime;}
                 .Button4{color: gold;}
-            @media screen and (orientation:portrait){
+            /* @media screen and (orientation:portrait){
                 #jsj {width: 90vw;height: 200px;padding: 80px 0 80px 0}
                 #jsj1 {width: 60vw;height: 200px;}
                 .Button {font-size:48pt; margin: 20px 20px;}
                 .text_input {font-size:54pt;width: 40vw;}
                 .Button2,.Button3,.Button4{line-height: 84pt;}
                 .Button2{font-size: 72pt;}
-            }
+            } */
             </style>
             <table id="jsj">
                 <tr>
@@ -724,12 +688,13 @@ window.onload = function () {
             <button id="btnSave3" class="nf">儲存</button>
             <br /><button id="btnSearch3" class="nf">查詢記錄</button>
             <button id="btnSum3" class="nf">總計</button> 
-            <!-- <button id="btnCopy1" class="nf">複製</button> -->
+            <button id="btnCopy3" class="nf">複製</button>
+            <button id="btnClean4" class="nf br">清除記錄</button>
         </div>
 
         <div id="div5" class="divShow">
             <!-- <iframe id="blog2" frameborder="0" src="​https://docs.google.com/document/d/1LMDcIOlIHy4UK2uRATWiRwbga4JcEpHKwk4G80Vyg-w/edit?usp=sharing"></iframe> -->
-            <!-- <iframe id="blog2" frameborder="0" src="https://line.me/ti/g2/d9kondefPW9QyDG2_4H86S8WjC_S0vYHTvigsQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"></iframe> -->
+            <!-- 播放youtube -->
             <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OSi3X2OLres" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         </div>
 
@@ -737,8 +702,8 @@ window.onload = function () {
             <div id="nfShow1"></div>
             <input id="nfNum1" class="nfNumClass" type="number" placeholder="今日念佛總數" />
             <button id="btnSave1" class="nf">儲存</button>
-            <br /><button id="btnSearch1" class="nf">查詢記錄</button> <button id="btnSum1" class="nf">總計</button> <button
-                id="btnCopy1" class="nf">複製</button>
+            <br /><button id="btnSearch1" class="nf">查詢記錄</button> <button id="btnSum1" class="nf">總計</button> <button id="btnCopy1" class="nf">複製</button>
+            <button id="btnClean2" class="nf br">清除記錄</button>
         </div>
 
         <div id="div3" class="divShow">
@@ -748,22 +713,48 @@ window.onload = function () {
             <button id="btnSave2" class="nf gk">儲存</button>
             <br /><button id="btnSearch2" class="nf gk">查詢記錄</button> <button id="btnSum2" class="nf gk">總計</button>
             <button id="btnCopy2" class="nf gk">複製</button>
+            <button id="btnClean3" class="nf br">清除記錄</button>
         </div>
 
         <div id="div4" class="divShow">
 
-            <button id="btnClean0" class="nf">清除記錄</button>
-            <table class="clean">
-                <tr><td><button id="btnClean4" class="nf">清除計數器記錄</button></td></tr>
-                <tr><td><button id="btnClean2" class="nf">清除佛號記錄</button></td></tr>
-                <tr><td><button id="btnClean3" class="nf">清除功課記錄</button></td></tr>
-                <tr><td><button id="btnClean1" class="nf">清除所有記錄</button></td></tr>
-            </table>
 
             <div id="cleanShow">
                 <table id="me">
                     <tr>
-                        <td>重新安裝網址</td>
+                        <td>法師介紹</td>
+                        <td>
+                            <ul>
+                                <li><a href="https://namo-amtb.org/ben-yin-intro/">本因法師簡介</a><br></li>
+                                <li><a href="https://www.benyin-master.org/">本因法師資訊網</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>念佛計數</td>
+                        <td>
+                            <button id="btn7" class="nf bk">算盤</button>
+                            <button id="btn2" class="nf">念佛計數</button>
+                            <button id="btn6" class="nf">計數器念佛</button>
+                            <button id="btn3" class="nf gk">功課計數</button>
+                            <button id="btnClean1" class="nf br">清除所有記錄</button>
+                                
+                            <!-- <ul class="cleanmula"><button id="btnClean0" class="nf br">清除記錄</button>
+                                <li>
+                                    <ul class="clean">
+                                        <li><button id="btnClean4" class="nf br">清除計數器記錄</button></li>
+                                        <li><button id="btnClean2" class="nf br">清除佛號記錄</button></li>
+                                        <li><button id="btnClean3" class="nf br">清除功課記錄</button></li>
+                                        <li><button id="btnClean1" class="nf br">清除所有記錄</button></li>
+                                    </ul>
+                                </li>
+                            </ul> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>安裝網址<br>
+                            <button id="reload" class="nf" onclick="javascript:window.location.reload()">重整頁面</button>
+                        </td>
                         <td>
                             <ul>
                                 <li>iPhone 安裝步驟：</li>
@@ -772,10 +763,12 @@ window.onload = function () {
                                     <li>2. 右下角三點符號中「使用瀏覽器打開」</li>
                                     <li>3. 按分享後往下滾動「加入主畫面」按下並「新增」</li>
                                 </ul>
-                                <li>安卓手機及電腦，按首頁上方按鈕可安裝。或下載APK再安裝</li>
+                                <hr/>
+                                <li>安卓手機及電腦，<button id="addPWA" class="nf" disabled>點此安裝APP</button>。或下載APK再安裝</li>
                                 <ul>
                                     <li><a href="https://adbdao.github.io/pwa_by/index.html" target="_blank">本因法師APP網址</a></li>
-                                    <li><a href="http://adbdao.url.tw/pwa/%E4%B8%89%E5%BE%B7%E7%B2%BE%E8%88%8D.apk" target="_blank">本因法師APK下載點</a>
+                                    <li><a href="http://adbdao.url.tw/pwa/%E4%B8%89%E5%BE%B7%E7%B2%BE%E8%88%8D.apk"
+                                            target="_blank">本因法師APK下載點</a>
                                     </li>
                                 </ul>
                             </ul>
@@ -786,23 +779,9 @@ window.onload = function () {
         </div>
     <!-- </div> -->
 
-    <table>
-        <tr>
-            <!-- <div id="btnmula" class="mula"> -->
-            <td class="tddown"><button id="btn1" class="btnshow">首頁</button></td>
-            <!-- <td class="tddown"><button id="btn5" class="btnshow">最新<br />消息</button></td> -->
-            <td class="tddown"><button id="btn7" class="btnshow">算盤</button></td>
-            <td class="tddown"><button id="btn2" class="btnshow">念佛<br />計數</button></td>
-            <td class="tddown"><button id="btn6" class="btnshow">計數器<br />念佛</button></td>
-            <td class="tddown"><button id="btn3" class="btnshow">功課<br />計數</button></td>
-            <td class="tddown"><button id="btn4" class="btnshow">安裝步驟</button></td>
-            <!-- </div> -->
-        </tr>
-    </table>
-
     <!-- 不能不顯示，否則無法運算 -->
     <!-- <textarea id="txt1" style="display: none;"></textarea> -->
-    <!-- <textarea id="txt1" "></textarea> -->
+    <textarea id="txt1" "></textarea>
 
     <script>
 window.addEventListener('load', function () {
