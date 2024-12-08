@@ -22,10 +22,10 @@
             "type": "image/png"
         }
     ],
-    "display": "standalone",
+    "display": "minimal-ui",
     "scope": "/pwa_by/",
     "start_url": "/pwa_by/",
     "id": "/pwa_by/",
-    "theme_color": "#f0f8ff",
+    "theme_color": "#5590FF",
     "background_color": "#90FFFF"
 }
