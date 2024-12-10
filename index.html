@@ -24,7 +24,7 @@ body {background: -webkit-linear-gradient(right, #0066EF 0.00%, #3EA0FF 100.00%)
 table{height: 100%;width: 100%;border: 0;}
 
 /* 全部按鈕 */
-button ,.big,.small{border-radius: 15px;border:0; background: -webkit-linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%); background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);
+button{border-radius: 15px;border:0; background: -webkit-linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%); background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);
     /* box-shadow: 4px 3px 4px silver,8px 7px 7px gray; */
 }
 button:active,textarea:active{border-color: indigo #f3f #f6f indigo;border-width:1px;border-style:solid;box-shadow: 0 0;
@@ -33,16 +33,12 @@ button:active,textarea:active{border-color: indigo #f3f #f6f indigo;border-width
 /* 上邊全部按鈕 */
 .tdup{height: 10vh;width: 50vw;}
 /* 各別按鈕 */
-/* #addPWA{height: 90%;color: blue; font-size: 12pt; text-align: justify;}
-#reload{height:90%;color: green; font-size: 18pt;  text-align: justify;} */
 #addPWA{color: blue;}
 #reload{color: green;}
 /* 下邊全部按鈕 */
 .tddown{height: 10vh;width: calc(100vw / 4);}
 .btnshow{height: 90%;width: 90%; color: brown; font-size: 1.2em; }
 
-/* .btnmula{height: 20vh;width: 100%;}
-.divmula{height: 80vh;width: 100%;} */
 #byimg{text-align: center;}
 #blog1 {height: 80vh;width: 291px;
     /* margin: 2em auto; */
@@ -69,7 +65,6 @@ object-fit: scale-down;
 /* 全部頁面 */
 .divShow{display: none;}
 /* 各別頁面 */
-/* #div0 {background:#ccc;background:#fec;} */
 #div1 {display: block;}
 
 #div7 {background:beige;height: 80vh;width: 100%;text-align: center;
@@ -115,11 +110,16 @@ font{color: crimson;font-size: 1.1em;}
 #txt1{width: 1px;height: 1px;border: 0;}
 
 #div8,#div9{text-align: center;}
-.big {padding:2px ;width: 80vw;margin: 10px auto; background: tan; color: brown; font-size: 1.2em; font-family: '標楷體'; text-align: center;}
-.small a { color: black; font-size: 1em; text-decoration: none;}
-.small {padding:1px ;width: 90%;margin: 1px auto; border: 2px solid peru; background: -webkit-linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%); background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);}
+.big {border-radius: 15px;padding:2px ;width: 80vw;margin: 10px auto; 
+background: -webkit-linear-gradient(top, khaki 0%, #db5 15%, #ea3 85%, #c90 100%);
+background: linear-gradient(top, khaki 0%, #db5 15%, #ea3 85%, #c90 100%);
+color: black; font-size: 1.2em; font-family: '標楷體'; text-align: center;}
+.small a {border-radius: 15px; color: black; font-size: 1em; text-decoration: none;}
+.small { border-radius: 15px;padding:1px ;width: 90%;margin: 1px auto;border: 2px solid #db5;
+background: -webkit-linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%); 
+background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);}
 .small:hover { border-color: green lime lime green; border-width: 2px; border-style: solid; background: greenyellow;}
-.small a:active { border-color: indigo #f3f #f6f indigo; border-width: 3px; border-style: solid; background: pink;}
+.small a:active { border-color: indigo #f3f #f6f indigo; border-width: 2px; border-style: solid; background: pink;}
 /* 去除點標 */
 #div8 li,#div9 li{display: none;list-style-type:none;}
 /* 滑入呈現 */
@@ -609,7 +609,7 @@ window.onload = function () {
                     h.setAttribute('data-title', k.toLowerCase())
                     h.className = 'big'
                 } else {
-                    // 加入頁面後，才進行下一個課程項目
+                    // 加入頁面div後，才進行下一個課程項目
                     DivName.appendChild(h)
                     h = null
                     h = document.createElement('ul')
@@ -628,7 +628,7 @@ window.onload = function () {
                 g.setAttribute('data-title', k.toLowerCase())
                 g.className = 'small'
                 g.appendChild(aA)
-                // 加入到上面的ul中
+                // 加入到上面的<ul>中
                 h.appendChild(g)
             }
         }
@@ -678,16 +678,13 @@ window.onload = function () {
 </script>
 </head>
 <body>
-    <!-- <div id="divmula" class="mula"> -->
     <table>
         <tr>
-            <!-- <div id="btnmula" class="mula"> -->
             <td class="tddown"><button id="btn1" class="btnshow">首頁</button></td>
             <!-- <td class="tddown"><button id="btn5" class="btnshow">最新<br />消息</button></td> -->
             <td class="tddown"><button id="btn8" class="btnshow">比丘課程</button></td>
             <td class="tddown"><button id="btn9" class="btnshow">居士課程</button></td>
             <td class="tddown"><button id="btn4" class="btnshow">功能</button></td>
-            <!-- </div> -->
         </tr>
     </table>
         <div id="div1" class="divShow">
@@ -791,8 +788,9 @@ window.onload = function () {
                         <td>法師介紹</td>
                         <td>
                             <ul>
-                                <!-- <li><a href="https://namo-amtb.org/ben-yin-intro/">本因法師簡介</a><br></li> -->
+                                <li><a href="https://namo-amtb.org/ben-yin-intro/">本因法師簡介</a><br></li>
                                 <li><a href="https://www.benyin-master.org/">本因法師資訊網</a></li>
+                                <li><a href="http://adbdao.url.tw/#c=by">本因法師講戒筆錄</a></li>
                             </ul>
                         </td>
                     </tr>
@@ -841,7 +839,6 @@ window.onload = function () {
         <div id="div9" class="divShow">
             點擊「文字」才可連結到YouTube<input type="text" id="search9" style="height:14pt;" placeholder="輸入關鍵字查詢">
         </div>
-    <!-- </div> -->
 
     <!-- 不能不顯示，否則無法運算 -->
     <!-- <textarea id="txt1" style="display: none;"></textarea> -->
