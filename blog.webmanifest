@@ -3,7 +3,7 @@
     "short_name": "本因法師",
     "description": "本因法師",
     "lang": "zh-Hant-TW",
-    "version": "1.0",
+    "version": "2.0",
     "author": "DaoChung",
     "icons": [
         {
@@ -27,5 +27,5 @@
     "start_url": "/pwa_by/",
     "id": "/pwa_by/",
     "theme_color": "#5590FF",
-    "background_color": "#87CEFA"
+    "background_color": "#3EA0FF"
 }
