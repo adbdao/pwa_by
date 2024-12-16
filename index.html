@@ -96,9 +96,9 @@ clear: both;
 .cleanmula{list-style-type:none;
     /* text-align: right;margin-top: -2em; */
 }
-/* iPhone上，hover不反應，必須用active */
+/* iPhone上，hover不反應，必須用active。後來發現還是不行，要用js */
 .cleanmula:hover>li>ul{display: block;}
-.cleanmula:active>li>ul{display: block;}
+/* .cleanmula:active>li>ul{display: block;} */
 /* 去除點標 */
 .clean{display: none;list-style-type:none;}
 .clean li{padding: 5px 5px;}
@@ -121,20 +121,32 @@ color: black; font-size: 1.2em; font-family: '標楷體'; text-align: center;}
 .small { border-radius: 15px;padding:1px ;width: 90%;margin: 1px auto;border: 2px solid #db5;
 background: -webkit-linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%); 
 background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);}
-.small:active { border-color: green lime lime green; border-width: 2px; border-style: solid; background: greenyellow;}
+/* .small:active { border-color: green lime lime green; border-width: 2px; border-style: solid; background: greenyellow;} */
 .small:hover { border-color: green lime lime green; border-width: 2px; border-style: solid; background: greenyellow;}
 .small a:active { border-color: indigo #f3f #f6f indigo; border-width: 2px; border-style: solid; background: pink;}
 /* 去除點標 */
 #div8 li,#div9 li{display: none;list-style-type:none;}
 /* 滑入呈現 */
-/* iPhone上，hover不反應，必須用active */
-#div8 ul:active>li,#div9 ul:active>li{display: block}
+/* iPhone上，hover不反應，必須用active。後來發現還是不行，要用js */
+/* #div8 ul:active>li,#div9 ul:active>li{display: block} */
 #div8 ul:hover>li,#div9 ul:hover>li{display: block}
 
 </style>
 <script>
 window.onload = function () {
-    // 循環顯示div
+    // iPhone上，hover不反應，所以改用js呈現li
+    function showUlLi(divID){
+        divID.onclick=()=>{
+            if(li_style.innerHTML){
+                li_style.innerHTML=''
+            }else{
+                li_style.innerHTML='#div8 ul li,#div9 ul li{display: block}'
+            }
+        }
+    }
+    showUlLi(showliall8)
+    showUlLi(showliall9)
+        // 循環顯示div
     function showdiv(divID) {
         var divNone = document.getElementsByClassName('divShow')
         for (var i = 0; i < divNone.length; i++) {
@@ -688,7 +700,7 @@ window.onload = function () {
     }
 </script>
 </head>
-<body>
+<body ontouchstart>
     <table>
         <tr>
             <td class="tddown"><button id="btn1" class="btnshow">首頁</button></td>
@@ -846,16 +858,17 @@ window.onload = function () {
             </div>
         </div>
         <div id="div8" class="divShow">
-            點擊「文字」才可連結到YouTube<input type="text" id="search8" style="height:14pt;" placeholder="輸入關鍵字查詢">
+            點擊「文字」才可連結到YouTube<input type="text" id="search8" style="height:14pt;" placeholder="輸入關鍵字查詢"><button id="showliall8" class="nf bk">全部展開/收合</button>
         </div>
         <div id="div9" class="divShow">
-            點擊「文字」才可連結到YouTube<input type="text" id="search9" style="height:14pt;" placeholder="輸入關鍵字查詢">
+            點擊「文字」才可連結到YouTube<input type="text" id="search9" style="height:14pt;" placeholder="輸入關鍵字查詢"><button id="showliall9" class="nf bk">全部展開/收合</button>
         </div>
 
     <!-- 不能不顯示，否則無法運算 -->
     <!-- <textarea id="txt1" style="display: none;"></textarea> -->
     <textarea id="txt1" "></textarea>
     <style id="search_style"></style>
+    <style id="li_style"></style>
 
     <script>
 window.addEventListener('load', function () {
