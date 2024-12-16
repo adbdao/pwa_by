@@ -124,7 +124,7 @@ background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);}
 /* .small:active { border-color: green lime lime green; border-width: 2px; border-style: solid; background: greenyellow;} */
 .small:hover { border-color: green lime lime green; border-width: 2px; border-style: solid; background: greenyellow;}
 .small a:active { border-color: indigo #f3f #f6f indigo; border-width: 2px; border-style: solid; background: pink;}
-/* 去除點標 */
+/* 去除點標，隱藏li */
 #div8 li,#div9 li{display: none;list-style-type:none;}
 /* 滑入呈現 */
 /* iPhone上，hover不反應，必須用active。後來發現還是不行，要用js */
@@ -134,13 +134,13 @@ background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);}
 </style>
 <script>
 window.onload = function () {
-    // iPhone上，hover不反應，所以改用js呈現li
+    // iPhone上，hover不反應，所以改用js呈現/隱藏li
     function showUlLi(divID){
         divID.onclick=()=>{
             if(li_style.innerHTML){
                 li_style.innerHTML=''
             }else{
-                li_style.innerHTML='#div8 ul li,#div9 ul li{display: block}'
+                li_style.innerHTML='#div8 li,#div9 li{display: block}'
             }
         }
     }
