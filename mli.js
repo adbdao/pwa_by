@@ -9,17 +9,18 @@ function readList(name) {
     // 導入陣列
     var b = a.split('\n')
 
-    // 刪除陣列中的空元素、無效值
-    b = b.filter(item => item)
-
     // 進行你要的操作
     for (var i = 0; i < b.length; i++) {
         b[i] = b[i]
-        // 必須刪除換行符號，不然導入index.html會出現一大堆換行符
-        .replace(/\r+/gi, '')
-        // 刪除重複tag
+            // 必須刪除換行符號，不然導入index.html會出現一大堆換行符
+            .replace(/\r+/gi, '')
+            // 刪除重複tag
             .replace(/\t+/gi, '\t')
     }
+
+    // 刪除陣列中的空元素、無效值
+    b = b.filter(item => item)
+
     // 返回陣列(橫)
     return b.join('","')
 }
